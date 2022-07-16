@@ -51,7 +51,7 @@
             this.button22 = new System.Windows.Forms.Button();
             this.btnZero = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
+            this.btnIgual = new System.Windows.Forms.Button();
             this.btnDivide = new System.Windows.Forms.Button();
             this.btnLimpa = new System.Windows.Forms.Button();
             this.txtResultadoTemporario = new System.Windows.Forms.TextBox();
@@ -59,6 +59,7 @@
             // 
             // txtVisor
             // 
+            this.txtVisor.Enabled = false;
             this.txtVisor.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtVisor.Location = new System.Drawing.Point(12, 12);
             this.txtVisor.Multiline = true;
@@ -311,16 +312,17 @@
             this.button24.Text = "+/-";
             this.button24.UseVisualStyleBackColor = false;
             // 
-            // button21
+            // btnIgual
             // 
-            this.button21.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button21.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button21.Location = new System.Drawing.Point(255, 524);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(75, 73);
-            this.button21.TabIndex = 25;
-            this.button21.Text = "=";
-            this.button21.UseVisualStyleBackColor = false;
+            this.btnIgual.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnIgual.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnIgual.Location = new System.Drawing.Point(255, 524);
+            this.btnIgual.Name = "btnIgual";
+            this.btnIgual.Size = new System.Drawing.Size(75, 73);
+            this.btnIgual.TabIndex = 25;
+            this.btnIgual.Text = "=";
+            this.btnIgual.UseVisualStyleBackColor = false;
+            this.btnIgual.Click += new System.EventHandler(this.btnIgual_Click);
             // 
             // btnDivide
             // 
@@ -351,10 +353,13 @@
             // 
             // txtResultadoTemporario
             // 
-            this.txtResultadoTemporario.Location = new System.Drawing.Point(186, 88);
+            this.txtResultadoTemporario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtResultadoTemporario.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtResultadoTemporario.Location = new System.Drawing.Point(186, 77);
             this.txtResultadoTemporario.Name = "txtResultadoTemporario";
-            this.txtResultadoTemporario.Size = new System.Drawing.Size(144, 23);
+            this.txtResultadoTemporario.Size = new System.Drawing.Size(144, 27);
             this.txtResultadoTemporario.TabIndex = 28;
+            this.txtResultadoTemporario.TextChanged += new System.EventHandler(this.txtResultadoTemporario_TextChanged);
             // 
             // Calculadora
             // 
@@ -365,7 +370,7 @@
             this.Controls.Add(this.txtResultadoTemporario);
             this.Controls.Add(this.btnLimpa);
             this.Controls.Add(this.btnDivide);
-            this.Controls.Add(this.button21);
+            this.Controls.Add(this.btnIgual);
             this.Controls.Add(this.button22);
             this.Controls.Add(this.btnZero);
             this.Controls.Add(this.button24);
@@ -420,7 +425,7 @@
         private Button button22;
         private Button btnZero;
         private Button button24;
-        private Button button21;
+        private Button btnIgual;
         private Button btnDivide;
         private Button btnLimpa;
         private TextBox txtResultadoTemporario;
