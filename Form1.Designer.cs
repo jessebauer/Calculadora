@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculadora));
             this.txtVisor = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnRaiz = new System.Windows.Forms.Button();
+            this.btnEleva = new System.Windows.Forms.Button();
+            this.btnDivUm = new System.Windows.Forms.Button();
             this.btnMultiplica = new System.Windows.Forms.Button();
             this.btnNove = new System.Windows.Forms.Button();
             this.btnOito = new System.Windows.Forms.Button();
@@ -47,14 +46,14 @@
             this.btnTres = new System.Windows.Forms.Button();
             this.btnDois = new System.Windows.Forms.Button();
             this.btnUm = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnVirgula = new System.Windows.Forms.Button();
             this.btnZero = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
+            this.btnInverteSinal = new System.Windows.Forms.Button();
             this.btnIgual = new System.Windows.Forms.Button();
             this.btnDivide = new System.Windows.Forms.Button();
             this.btnLimpa = new System.Windows.Forms.Button();
-            this.txtResultadoTemporario = new System.Windows.Forms.TextBox();
+            this.txtTelaTemporaria = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtVisor
@@ -90,38 +89,39 @@
             this.button2.Text = "CE";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btnRaiz
             // 
-            this.button6.BackColor = System.Drawing.Color.DimGray;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button6.Location = new System.Drawing.Point(174, 208);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 73);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "√";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnRaiz.BackColor = System.Drawing.Color.DimGray;
+            this.btnRaiz.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnRaiz.Location = new System.Drawing.Point(174, 208);
+            this.btnRaiz.Name = "btnRaiz";
+            this.btnRaiz.Size = new System.Drawing.Size(75, 73);
+            this.btnRaiz.TabIndex = 7;
+            this.btnRaiz.Text = "√";
+            this.btnRaiz.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // btnEleva
             // 
-            this.button7.BackColor = System.Drawing.Color.DimGray;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button7.Location = new System.Drawing.Point(93, 208);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 73);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "x²";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnEleva.BackColor = System.Drawing.Color.DimGray;
+            this.btnEleva.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnEleva.Location = new System.Drawing.Point(93, 208);
+            this.btnEleva.Name = "btnEleva";
+            this.btnEleva.Size = new System.Drawing.Size(75, 73);
+            this.btnEleva.TabIndex = 6;
+            this.btnEleva.Text = "x²";
+            this.btnEleva.UseVisualStyleBackColor = false;
+            this.btnEleva.Click += new System.EventHandler(this.btnEleva_Click);
             // 
-            // button8
+            // btnDivUm
             // 
-            this.button8.BackColor = System.Drawing.Color.DimGray;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button8.Location = new System.Drawing.Point(12, 208);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 73);
-            this.button8.TabIndex = 5;
-            this.button8.Text = "1/x";
-            this.button8.UseVisualStyleBackColor = false;
+            this.btnDivUm.BackColor = System.Drawing.Color.DimGray;
+            this.btnDivUm.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDivUm.Location = new System.Drawing.Point(12, 208);
+            this.btnDivUm.Name = "btnDivUm";
+            this.btnDivUm.Size = new System.Drawing.Size(75, 73);
+            this.btnDivUm.TabIndex = 5;
+            this.btnDivUm.Text = "1/x";
+            this.btnDivUm.UseVisualStyleBackColor = false;
             // 
             // btnMultiplica
             // 
@@ -267,27 +267,28 @@
             this.btnUm.UseVisualStyleBackColor = false;
             this.btnUm.Click += new System.EventHandler(this.btnUm_Click);
             // 
-            // button3
+            // btnLimpar
             // 
-            this.button3.BackColor = System.Drawing.Color.DimGray;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(174, 129);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 73);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "C";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnLimpar.BackColor = System.Drawing.Color.DimGray;
+            this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnLimpar.Location = new System.Drawing.Point(174, 129);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(75, 73);
+            this.btnLimpar.TabIndex = 21;
+            this.btnLimpar.Text = "C";
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
-            // button22
+            // btnVirgula
             // 
-            this.button22.BackColor = System.Drawing.Color.DimGray;
-            this.button22.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button22.Location = new System.Drawing.Point(173, 524);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(75, 73);
-            this.button22.TabIndex = 24;
-            this.button22.Text = ",";
-            this.button22.UseVisualStyleBackColor = false;
+            this.btnVirgula.BackColor = System.Drawing.Color.DimGray;
+            this.btnVirgula.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnVirgula.Location = new System.Drawing.Point(173, 524);
+            this.btnVirgula.Name = "btnVirgula";
+            this.btnVirgula.Size = new System.Drawing.Size(75, 73);
+            this.btnVirgula.TabIndex = 24;
+            this.btnVirgula.Text = ",";
+            this.btnVirgula.UseVisualStyleBackColor = false;
             // 
             // btnZero
             // 
@@ -301,16 +302,16 @@
             this.btnZero.UseVisualStyleBackColor = false;
             this.btnZero.Click += new System.EventHandler(this.btnZero_Click);
             // 
-            // button24
+            // btnInverteSinal
             // 
-            this.button24.BackColor = System.Drawing.Color.DimGray;
-            this.button24.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button24.Location = new System.Drawing.Point(11, 524);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(75, 73);
-            this.button24.TabIndex = 22;
-            this.button24.Text = "+/-";
-            this.button24.UseVisualStyleBackColor = false;
+            this.btnInverteSinal.BackColor = System.Drawing.Color.DimGray;
+            this.btnInverteSinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnInverteSinal.Location = new System.Drawing.Point(11, 524);
+            this.btnInverteSinal.Name = "btnInverteSinal";
+            this.btnInverteSinal.Size = new System.Drawing.Size(75, 73);
+            this.btnInverteSinal.TabIndex = 22;
+            this.btnInverteSinal.Text = "+/-";
+            this.btnInverteSinal.UseVisualStyleBackColor = false;
             // 
             // btnIgual
             // 
@@ -339,7 +340,6 @@
             // btnLimpa
             // 
             this.btnLimpa.BackColor = System.Drawing.Color.DimGray;
-            this.btnLimpa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLimpa.BackgroundImage")));
             this.btnLimpa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLimpa.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnLimpa.Location = new System.Drawing.Point(255, 129);
@@ -351,15 +351,15 @@
             this.btnLimpa.UseVisualStyleBackColor = false;
             this.btnLimpa.Click += new System.EventHandler(this.btnLimpa_Click);
             // 
-            // txtResultadoTemporario
+            // txtTelaTemporaria
             // 
-            this.txtResultadoTemporario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtResultadoTemporario.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtResultadoTemporario.Location = new System.Drawing.Point(186, 77);
-            this.txtResultadoTemporario.Name = "txtResultadoTemporario";
-            this.txtResultadoTemporario.Size = new System.Drawing.Size(144, 27);
-            this.txtResultadoTemporario.TabIndex = 28;
-            this.txtResultadoTemporario.TextChanged += new System.EventHandler(this.txtResultadoTemporario_TextChanged);
+            this.txtTelaTemporaria.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTelaTemporaria.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtTelaTemporaria.Location = new System.Drawing.Point(186, 77);
+            this.txtTelaTemporaria.Name = "txtTelaTemporaria";
+            this.txtTelaTemporaria.Size = new System.Drawing.Size(144, 27);
+            this.txtTelaTemporaria.TabIndex = 28;
+            this.txtTelaTemporaria.TextChanged += new System.EventHandler(this.txtResultadoTemporario_TextChanged);
             // 
             // Calculadora
             // 
@@ -367,14 +367,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(342, 615);
-            this.Controls.Add(this.txtResultadoTemporario);
+            this.Controls.Add(this.txtTelaTemporaria);
             this.Controls.Add(this.btnLimpa);
             this.Controls.Add(this.btnDivide);
             this.Controls.Add(this.btnIgual);
-            this.Controls.Add(this.button22);
+            this.Controls.Add(this.btnVirgula);
             this.Controls.Add(this.btnZero);
-            this.Controls.Add(this.button24);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnInverteSinal);
+            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnSoma);
             this.Controls.Add(this.btnTres);
             this.Controls.Add(this.btnDois);
@@ -387,15 +387,14 @@
             this.Controls.Add(this.btnNove);
             this.Controls.Add(this.btnOito);
             this.Controls.Add(this.btnSete);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button8);
+            this.Controls.Add(this.btnRaiz);
+            this.Controls.Add(this.btnEleva);
+            this.Controls.Add(this.btnDivUm);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtVisor);
             this.Name = "Calculadora";
             this.Text = "Calculadora";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -406,9 +405,9 @@
         private TextBox txtVisor;
         private Button button1;
         private Button button2;
-        private Button button6;
-        private Button button7;
-        private Button button8;
+        private Button btnRaiz;
+        private Button btnEleva;
+        private Button btnDivUm;
         private Button btnMultiplica;
         private Button btnNove;
         private Button btnOito;
@@ -421,13 +420,13 @@
         private Button btnTres;
         private Button btnDois;
         private Button btnUm;
-        private Button button3;
-        private Button button22;
+        private Button btnLimpar;
+        private Button btnVirgula;
         private Button btnZero;
-        private Button button24;
+        private Button btnInverteSinal;
         private Button btnIgual;
         private Button btnDivide;
         private Button btnLimpa;
-        private TextBox txtResultadoTemporario;
+        private TextBox txtTelaTemporaria;
     }
 }
